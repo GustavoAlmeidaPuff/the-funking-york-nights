@@ -1,4 +1,86 @@
-* {
-	padding: 0;
-	margin: 0;
+
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333; /* Fundo escuro */
 }
+
+
+/* logo */
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 50px;
+    padding: 5px; /* Espaço ao redor do logo */
+	background: #333;
+}
+
+
+/* nav */
+nav {
+	display: flex;
+    text-align: center;
+	align-items: center;
+	background-color: #333;
+}
+
+nav ul {
+    display: inline-flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+	background-color: #333;
+}
+
+nav ul li {
+    margin: 0 10px;
+	background-color: #333;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+	background-color: #333;
+    transition: color 0.3s;
+	color: #d5d5d5;
+}
+
+nav ul li a:hover {
+	color:  #bb2043;
+}
+
+/* button styles */
+.btn {
+    display: grid;
+    place-items: center;
+    background: #e3edf7;
+    padding: 1.1em;
+	background-color: #333d;
+    box-shadow: 6px 6px 10px  rgba(0,0,0,0.15);
+    border: 1px solid rgba(0,0,0,0);
+    cursor: pointer;
+    transition: transform 0.5s;
+  }
+  
+  .btn:hover {
+    border: 1px solid rgba(0,0,0,0.1);
+  }
+  
+  .btn svg {
+    transition: transform 0.5s;
+	fill: #58b8eb;
+  }
+  
+  .btn:hover svg {
+    transform: scale(0.9);
+    fill:  #bb2043;
+  }
