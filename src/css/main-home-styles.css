@@ -5,7 +5,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #333; /* Fundo escuro */
+    background-color: #333; 
 }
 
 
@@ -66,13 +66,13 @@ nav ul li a {
 	color: #d5d5d5;
 }
 
-nav ul li a:hover {
-	color: #bb2043;
+nav p {
+    background-color: #333;
+    color: #d5d5d5;
 }
 
-nav p {
-	background-color: #333;
-	color: #d5d5d5;
+nav ul li a:hover {
+	color: #bb2043;
 }
 
 
@@ -88,18 +88,31 @@ nav p {
     cursor: pointer;
     transition: transform 0.5s;
 	margin: 0;
-  }
+}
   
-  .btn:hover {
+.btn:hover {
     border: 1px solid rgba(0,0,0,0.1);
-  }
+}
   
-  .btn svg {
+.btn svg {
     transition: transform 0.5s;
 	fill: #333;
-  }
+}
   
-  .btn:hover svg {
+.btn:hover svg {
     transform: scale(0.9);
     fill:  #bb2043;
-  }
+}
+
+/* AD banner */
+
+.banner {
+    display: flex;
+    justify-content: center;
+    background-color: #d9d9d9;
+}
+
+.banner img{
+    max-width: 40%;
+    margin: 30px;
+}
