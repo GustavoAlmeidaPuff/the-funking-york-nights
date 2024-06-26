@@ -104,6 +104,7 @@ nav ul li a:hover {
     fill:  #bb2043;
 }
 
+
 /* AD banner */
 
 .banner {
@@ -116,3 +117,49 @@ nav ul li a:hover {
     max-width: 40%;
     margin: 30px;
 }
+
+
+/* main */
+
+
+.main-content {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+    width: 80%;
+    margin: 0 0 0 15vh;
+    flex-wrap: wrap;
+}
+
+/* random sentence */
+
+/* articles */
+
+.article{
+    display: flex;
+    align-items: center; 
+    margin: 10px 0;
+    width: 110vh;
+}
+
+.new-image-preview {
+    margin-right: 10px; 
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.headline-news-list {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.description-news-list {
+    margin: 5px 0 0;
+    color: #666;
+}
+
+/* asside */
