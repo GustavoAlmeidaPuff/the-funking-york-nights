@@ -120,27 +120,27 @@ nav ul li a:hover {
 
 
 /* main */
-
+main {
+    text-align: center;
+}
 
 .main-content {
     display: flex;
-    width: 100%;
+    justify-content: space-between; /* Distribui o espaço entre os elementos */
     max-width: 1200px;
-    justify-content: center;
-    width: 80%;
-    margin: 0 0 0 15vh;
-    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
 }
 
 /* random sentence */
 
 /* articles */
 
-.article{
+.article {
     display: flex;
-    align-items: center; 
+    align-items: center;
     margin: 10px 0;
-    width: 110vh;
 }
 
 .new-image-preview {
@@ -163,3 +163,11 @@ nav ul li a:hover {
 }
 
 /* asside */
+aside {
+    flex: 0,5; /* Faz o aside ocupar menos espaço comparado aos artigos */
+    margin-left: 20px; /* Espaçamento entre os artigos e o aside */
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+/*idk*/
