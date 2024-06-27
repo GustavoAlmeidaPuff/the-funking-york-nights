@@ -33,3 +33,8 @@ nav {
 .most-seen-title {
     font-size: 0.9em;
 }
+
+.most-seen li a{
+    text-decoration: none;
+    color: black;
+}
