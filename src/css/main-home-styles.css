@@ -172,6 +172,7 @@ aside{
     justify-content: center;
 }
 .most-seen-section {
+    margin-right: 20px;
     flex: 0,5;
     margin-left: 20px;
     padding: 20px;
@@ -181,5 +182,9 @@ aside{
 
 .most-seen li {
     padding: 0.5em;
+}
+
+.squareAD {
+    margin-top: 2vh;
 }
 /*idk*/
