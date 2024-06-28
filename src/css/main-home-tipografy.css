@@ -1,15 +1,15 @@
 @font-face {
     font-family: 'funkin font';
-    src: url('/docs/fonts/funkin/docallismeonstreet.otf') format('woff2'),
-         url('/docs/fonts/funkin/DOCALLISME\ ON\ STREET.ttf') format('woff');
+    src: url('./fonts/funkin/docallismeonstreet.otf') format('woff2'),
+         url('./fonts/funkin/DOCALLISME\ ON\ STREET.ttf') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'paragraph font';
-    src: url('/docs/fonts/paragraph/coolvetica\ rg.otf') format('woff2'),
-         url('/docs/fonts/paragraph/coolvetica\ condensed\ rg.otf') format('woff');
+    src: url('./fonts/paragraph/coolvetica\ rg.otf') format('woff2'),
+         url('./fonts/paragraph/coolvetica\ condensed\ rg.otf') format('woff');
     font-weight: normal;
     font-style: normal;
 }

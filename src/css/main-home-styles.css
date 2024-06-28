@@ -34,6 +34,7 @@ header {
 
 .home-header-title:hover {
 	background: linear-gradient(to right, #bb2043, #58b8eb); 
+    -webkit-background-clip: text; 
 }
 
 
