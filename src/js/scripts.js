@@ -75,7 +75,7 @@ let phrase_element = document.getElementById('sentence')
 phrase_element.innerHTML = "placeholder"
 
 let phrase = [
-    "If there are a news site that show how people are... show me it",
+    "If there are a news site that show how people REALLY are... show me it",
     "A funkin' way to stay up-to-date",
     "A mother funkin' news site",
     `"Why The funkin york nights?"... cus i made this site listening to the fnf's OST... it's simple`
