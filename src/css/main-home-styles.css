@@ -141,28 +141,36 @@ main {
     display: flex;
     align-items: center;
     margin: 10px 0;
+    background-color: #f6f6f6;
+    padding: 0 6px;
     cursor: pointer;
+    border-radius: 7px;
 }
 
 .new-image-preview {
     margin-right: 10px;
     width: 150px;
     height: 100;
+    
 }
 
 .text-content {
     display: flex;
     flex-direction: column;
+    background-color: #f6f6f6;
 }
 
 .headline-news-list {
     margin: 0;
     font-size: 1.8em;
+    background-color: #f6f6f6;
+
 }
 
 .description-news-list {
     margin: 5px 0 0;
     color: #666;
+    background-color: #f6f6f6;
 }
 
 /* asside */
@@ -185,13 +193,26 @@ aside{
     flex: 0,5;
     margin-left: 20px;
     padding: 25px;
-    background-color: #f0f0f0;
+    background-color: #f6f6f6;
     border-radius: 8px;
+}
+
+.most-seen-title {
+    background-color: #f6f6f6;
+}
+
+.most-seen {
+    background-color: #f6f6f6;
 }
 
 .most-seen li {
     padding: 0.5em;
     margin: 1em;
+    background-color: #f6f6f6;
+}
+
+.most-seen a {
+    background-color: #f6f6f6;
 }
 
 .squareAD {
