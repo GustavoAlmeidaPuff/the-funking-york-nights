@@ -168,26 +168,44 @@ main {
 /* asside */
 
 aside{
-    display: flex;
     flex-direction: column;
-    flex: 0,5;
-    align-items: center;
+    flex: 0,8;
     justify-content: center;
+    width: 60vh;
+    position: sticky;
+    top: 0;
 }
 .most-seen-section {
+    display: flex;
+    width: 65%;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
     margin-right: 20px;
     flex: 0,5;
     margin-left: 20px;
-    padding: 20px;
+    padding: 25px;
     background-color: #f0f0f0;
     border-radius: 8px;
 }
 
 .most-seen li {
     padding: 0.5em;
+    margin: 1em;
 }
 
 .squareAD {
+    width: 86%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     margin-top: 2vh;
+}
+
+.squareAD img {
+    margin-top: 15px;
+    width: 250px;
+    height: 250px;
 }
 /*idk*/
