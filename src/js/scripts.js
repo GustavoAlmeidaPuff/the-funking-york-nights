@@ -1,9 +1,9 @@
 // i have no ideia what i am doing, some of my codes in JS are GOP (GPT oriented programming)
 
-// Sua chave de API
+// my api key
 const apiKey = 'DxDbY6Gj5beG3WrBoVGsO01AJehXuoGI';
 
-// Função para buscar e exibir os artigos
+// Function to search and display articles
 async function fetchArticles() {
     const url = `https://api.nytimes.com/svc/mostpopular/v2/viewed/30.json?api-key=${apiKey}`;
 
@@ -15,21 +15,21 @@ async function fetchArticles() {
         const data = await response.json();
         const articles = data.results;
         
-        // Seleciona o elemento onde os artigos serão exibidos
+        // Select the element where the articles will be displayed
         const articlesContainer = document.getElementById('articles');
         
-        // Limpa o conteúdo anterior
+        // Clear previous content
         articlesContainer.innerHTML = '';
 
-        // Cria e insere elementos para cada artigo
+        // Create and insert elements for each article
         articles.forEach(article => {
             const articleElement = document.createElement('div');
             articleElement.classList.add('article');
 
-            // Inicializa a URL da imagem com o placeholder
+            // Initialize the image URL with the placeholder
             let imageUrl = 'https://placeholder.co/150x100';
 
-            // Verifica se o artigo tem mídia e se a mídia tem metadados
+            // Checks if the article has media and if the media has metadata
             if (article.media && article.media.length > 0) {
                 const mediaItem = article.media.find(mediaItem => 
                     mediaItem['media-metadata'] && mediaItem['media-metadata'].some(meta => meta.format === 'mediumThreeByTwo440')
@@ -60,9 +60,10 @@ async function fetchArticles() {
     }
 }
 
-// Chama a função para buscar e exibir os artigos quando a página é carregada
+// Calls the function to fetch and display the articles when the page loads
 fetchArticles();
 
+// function for testing purposes
 function test() {
     window.alert ('it is correct!!!!')
 }
