@@ -67,3 +67,26 @@ fetchArticles();
 function test() {
     window.alert ('it is correct!!!!')
 }
+
+//the random sentece code
+
+// Array de frases aleatórias
+let phrase_element = document.getElementById('sentence')
+phrase_element.innerHTML = "placeholder"
+
+let phrase = [
+    "If there are a news site that show how people are... show me it",
+    "A funkin' way to stay up-to-date",
+    "A mother funkin' news site",
+    `"Why The funkin york nights?"... cus i made this site listening to the fnf's OST... it's simple`
+];
+  
+// Função para gerar um número aleatório com base no comprimento do array
+function fraseAleatoria() {
+    let randomIndex = Math.floor(Math.random() * phrase.length);
+    return phrase[randomIndex];
+}
+
+// Exibindo a frase aleatória
+console.log(fraseAleatoria())
+phrase_element.innerHTML = (fraseAleatoria())
