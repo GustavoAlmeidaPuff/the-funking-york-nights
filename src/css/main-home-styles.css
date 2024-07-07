@@ -141,10 +141,13 @@ main {
     display: flex;
     align-items: center;
     margin: 10px 0;
+    cursor: pointer;
 }
 
 .new-image-preview {
-    margin-right: 10px; 
+    margin-right: 10px;
+    width: 150px;
+    height: 100;
 }
 
 .text-content {
