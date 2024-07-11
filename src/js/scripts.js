@@ -45,7 +45,7 @@ async function fetchArticles() {
 
             articleElement.innerHTML = `
                 
-                <article class="article" onclick="test()" >
+                <article class="article" onclick="message()" >
                     <img class="new-image-preview" src="${imageUrl}" alt="image preview">
                     <div class="text-content">
                         <h1 id="home-headline" class="headline-news-list"><a href="${article.url}" target="blank_" style="text-decoration: none; color: #000;">${article.title}</a></h1>
@@ -120,6 +120,10 @@ function fraseAleatoria() {
 console.log(fraseAleatoria())
 phrase_element.innerHTML = (fraseAleatoria())
 
-function test() {
-    window.alert ('TFYN site do NOT have a read page, you will be redirected to the original new page...')
+messageShows = 0
+function message() {
+    if (messageShows < 2) {
+        window.alert ('TFYN site do NOT have a read page, you will be redirected to the original new page...')
+        messageShows++
+    }
 }
