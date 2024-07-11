@@ -48,7 +48,7 @@ async function fetchArticles() {
                 <article class="article" onclick="test()" >
                     <img class="new-image-preview" src="${imageUrl}" alt="image preview">
                     <div class="text-content">
-                        <h1 id="home-headline" class="headline-news-list"><a href="${article.url}" style="text-decoration: none; color: #000;">${article.title}</a></h1>
+                        <h1 id="home-headline" class="headline-news-list"><a href="${article.url}" target="blank_" style="text-decoration: none; color: #000;">${article.title}</a></h1>
                         <p id="home-description" class="description-news-list"><a></a>${article.abstract}</p>
                     </div>
                 </article>
@@ -120,6 +120,5 @@ console.log(fraseAleatoria())
 phrase_element.innerHTML = (fraseAleatoria())
 
 function test() {
-    window.alert ('hello world')
-    window.location.href = article.url
+    window.alert ('TFYN site do NOT have a read page, you will be redirected to the original new page...')
 }
