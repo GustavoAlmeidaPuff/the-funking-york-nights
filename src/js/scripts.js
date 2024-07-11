@@ -123,7 +123,7 @@ phrase_element.innerHTML = (fraseAleatoria())
 messageShows = 0
 function message() {
     if (messageShows < 2) {
-        window.alert ('TFYN site do NOT have a read page, you will be redirected to the original new page...')
+        window.alert ('TFYN site do NOT have a read page yet, you will be redirected to the original new page...')
         messageShows++
     }
 }
