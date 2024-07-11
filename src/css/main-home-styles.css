@@ -180,20 +180,20 @@ aside{
     flex-direction: column;
     flex: 0,8;
     justify-content: center;
-    width: 60vh;
+    width: 65vh;
     position: sticky;
     top: 0;
 }
 .most-seen-section {
     display: flex;
-    width: 65%;
+    width: 70%;
     flex-direction: column;
     justify-content:center;
     align-items: center;
     margin-right: 20px;
     flex: 0,5;
     margin-left: 20px;
-    padding: 25px;
+    padding: 30px;
     background-color: #f6f6f6;
     border-radius: 8px;
 }
@@ -207,7 +207,7 @@ aside{
 }
 
 .most-seen li {
-    padding: 0.5em;
+    padding: 0.2em;
     margin: 1em;
     background-color: #f6f6f6;
 }

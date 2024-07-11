@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'funkin font';
     src: url('./fonts/funkin/docallismeonstreet.otf') format('woff2'),
-         url('./fonts/funkin/DOCALLISME\ ON\ STREET.ttf') format('woff');
+        url('./fonts/funkin/DOCALLISME\ ON\ STREET.ttf') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -9,12 +9,12 @@
 @font-face {
     font-family: 'paragraph font';
     src: url('./fonts/paragraph/coolvetica\ rg.otf') format('woff2'),
-         url('./fonts/paragraph/coolvetica\ condensed\ rg.otf') format('woff');
+        url('./fonts/paragraph/coolvetica\ condensed\ rg.otf') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-  
+
 .home-header-title{
     font-family: 'funkin font', Arial, Helvetica, sans-serif ;
     letter-spacing: 4px; 
@@ -31,10 +31,13 @@ nav {
 }
 
 .most-seen-title {
-    font-size: 0.9em;
+    font-size: auto;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    white-space: nowrap;
 }
 
 .most-seen li a{
     text-decoration: none;
     color: black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
