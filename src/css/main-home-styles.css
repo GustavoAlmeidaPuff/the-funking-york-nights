@@ -197,11 +197,11 @@ aside{
     border-radius: 8px;
 }
 
-.most-seen-title {
+.most-seen-title , a {
     background-color: #f6f6f6;
 }
 
-.most-seen {
+.most-seen , .most-seen a {
     background-color: #f6f6f6;
 }
 
@@ -211,9 +211,6 @@ aside{
     background-color: #f6f6f6;
 }
 
-.most-seen a {
-    background-color: #f6f6f6;
-}
 
 .squareAD {
     width: 86%;

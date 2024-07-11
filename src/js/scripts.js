@@ -5,26 +5,27 @@ const apiKey = 'DxDbY6Gj5beG3WrBoVGsO01AJehXuoGI';
 
 // Function to search and display articles
 async function fetchArticles() {
-    const url = `https://api.nytimes.com/svc/mostpopular/v2/viewed/30.json?api-key=${apiKey}`;
+    const url1 = `https://api.nytimes.com/svc/mostpopular/v2/viewed/30.json?api-key=${apiKey}`;
+    const url2 = `https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=${apiKey}`;
 
     try {
-        const response = await fetch(url);
+        const response = await fetch(url1);
         if (!response.ok) {
-            throw new Error(`Erro na requisição: ${response.status}`);
+            throw new Error(`Erro na requisição: ${response.status}`)
         }
-        const data = await response.json();
-        const articles = data.results;
+        const data = await response.json()
+        const articles = data.results
         
         // Select the element where the articles will be displayed
-        const articlesContainer = document.getElementById('articles');
+        const articlesContainer = document.getElementById('articles')
         
         // Clear previous content
-        articlesContainer.innerHTML = '';
+        articlesContainer.innerHTML = ''
 
         // Create and insert elements for each article
         articles.forEach(article => {
-            const articleElement = document.createElement('div');
-            articleElement.classList.add('article');
+            const articleElement = document.createElement('div')
+            articleElement.classList.add('article')
 
             // Initialize the image URL with the placeholder
             let imageUrl = 'https://placeholder.co/150x100';
@@ -33,7 +34,7 @@ async function fetchArticles() {
             if (article.media && article.media.length > 0) {
                 const mediaItem = article.media.find(mediaItem => 
                     mediaItem['media-metadata'] && mediaItem['media-metadata'].some(meta => meta.format === 'mediumThreeByTwo440')
-                );
+                )
                 if (mediaItem) {
                     const mediaMeta = mediaItem['media-metadata'].find(meta => meta.format === 'mediumThreeByTwo440');
                     if (mediaMeta && mediaMeta.url) {
@@ -43,34 +44,61 @@ async function fetchArticles() {
             }
 
             articleElement.innerHTML = `
+                
                 <article class="article" onclick="test()" >
-                        <img class="new-image-preview" src="${imageUrl}" alt="image preview">
-                        <div class="text-content">
-                            <h1 id="home-headline" class="headline-news-list">${article.title}</h1>
-                            <p id="home-description" class="description-news-list">${article.abstract}</p>
-                        </div>
+                    <img class="new-image-preview" src="${imageUrl}" alt="image preview">
+                    <div class="text-content">
+                        <h1 id="home-headline" class="headline-news-list"><a href="${article.url}" style="text-decoration: none; color: #000;">${article.title}</a></h1>
+                        <p id="home-description" class="description-news-list"><a></a>${article.abstract}</p>
+                    </div>
                 </article>
-            `;
+            `
             articlesContainer.appendChild(articleElement);
+
+
         });
     } catch (error) {
         console.error(error);
         const articlesContainer = document.getElementById('articles');
         articlesContainer.innerHTML = `<p>Erro ao buscar artigos: ${error.message}</p>`;
     }
-}
 
+
+    //fetch most-seen 
+    try {
+        const response = await fetch(url2);
+        if (!response.ok) {
+            throw new Error(`Erro na requisição: ${response.status}`);
+        }
+        const data = await response.json();
+        const mostSeen = data.results;
+
+        // Select the element where the items will be displayed
+        const mostSeenContainer = document.getElementById('most-seen');
+        
+        // Clear previous content
+        mostSeenContainer.innerHTML = '';
+
+        // Create and insert elements for each item
+        mostSeen.forEach( mostSeen => {
+            const mostSeenElement = document.createElement('li')
+            mostSeenElement.classList.add('most-seen-link')
+
+            mostSeenElement.innerHTML = `
+                <a href="${mostSeen.url}">${mostSeen.abstract}<a>
+            `
+
+            mostSeenContainer.appendChild(mostSeenElement);
+        })
+    }  catch (error) {
+
+    }
+}
 // Calls the function to fetch and display the articles when the page loads
 fetchArticles();
 
-// function for testing purposes
-function test() {
-    window.alert ('it is correct!!!!')
-}
 
 //the random sentece code
-
-// Array de frases aleatórias
 let phrase_element = document.getElementById('sentence')
 phrase_element.innerHTML = "placeholder"
 
@@ -90,3 +118,8 @@ function fraseAleatoria() {
 // Exibindo a frase aleatória
 console.log(fraseAleatoria())
 phrase_element.innerHTML = (fraseAleatoria())
+
+function test() {
+    window.alert ('hello world')
+    window.location.href = article.url
+}
