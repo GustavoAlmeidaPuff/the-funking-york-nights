@@ -84,8 +84,9 @@ async function fetchArticles() {
             const mostSeenElement = document.createElement('li')
             mostSeenElement.classList.add('most-seen-link')
 
+
             mostSeenElement.innerHTML = `
-                <a href="${mostSeen.url}">${mostSeen.abstract}<a>
+                <a href="${mostSeen.url}">${mostSeen.title}<a>
             `
 
             mostSeenContainer.appendChild(mostSeenElement);
