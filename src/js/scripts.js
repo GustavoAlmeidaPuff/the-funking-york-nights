@@ -49,7 +49,7 @@ async function fetchArticles() {
                 <img class="new-image-preview" src="${imageUrl}" alt="image preview">
                 <div class="text-content">
                     <h1 id="home-headline" class="headline-news-list"><a href="${article.url}" target="blank_" >${article.title}</a></h1>
-                    <p id="home-description" class="description-news-list"><a>${article.abstract}</a></p>
+                    <p id="home-description" class="description-news-list"><a href="${article.url}">${article.abstract}</a></p>
                     <p class="home-artilce-subject">${article.section}</P>
                 </div>
                 </article>
@@ -110,7 +110,7 @@ let phrase = [
     "A mother funkin' news site",
     `"Why The funkin york nights?"... cus i made this site listening to the fnf's OST... it's simple`
 ];
-  
+
 // Função para gerar um número aleatório com base no comprimento do array
 function fraseAleatoria() {
     let randomIndex = Math.floor(Math.random() * phrase.length);
