@@ -166,11 +166,20 @@ main {
     height: 100;
     
 }
+.description-news-list a {
+    text-decoration: none;
+    color: #666;
+}
 
 .headline-news-list a {
     text-decoration: none;
     color: #333;
 }
+
+.headline-news-list a:hover {
+    color: #bb2043;
+}
+
 .text-content {
     display: flex;
     color: #333;
