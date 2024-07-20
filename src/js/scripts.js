@@ -49,7 +49,7 @@ async function fetchArticles() {
                 <img class="new-image-preview" src="${imageUrl}" alt="image preview">
                 <div class="text-content">
                     <h1 id="home-headline" class="headline-news-list"><a href="${article.url}" target="blank_" >${article.title}</a></h1>
-                    <p id="home-description" class="description-news-list"><a href="${article.url}">${article.abstract}</a></p>
+                    <p id="home-description" class="description-news-list"><a target="blank_" href="${article.url}">${article.abstract}</a></p>
                     <p class="home-artilce-subject">${article.section}</P>
                 </div>
                 </article>
@@ -87,7 +87,7 @@ async function fetchArticles() {
 
 
             mostSeenElement.innerHTML = `
-                <a href="${mostSeen.url}">${mostSeen.title}<a>
+                <a target="blank_" href="${mostSeen.url}">${mostSeen.title}<a>
             `
 
             mostSeenContainer.appendChild(mostSeenElement);
