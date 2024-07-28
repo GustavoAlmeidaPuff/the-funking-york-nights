@@ -45,14 +45,14 @@ async function fetchArticles() {
 
             articleElement.innerHTML = `
                 
-                <article class="article" onclick="message()" >
-                <img class="new-image-preview" src="${imageUrl}" alt="image preview">
-                <div class="text-content">
-                    <h1 id="home-headline" class="headline-news-list"><a href="${article.url}" target="blank_" >${article.title}</a></h1>
-                    <p id="home-description" class="description-news-list"><a target="blank_" href="${article.url}">${article.abstract}</a></p>
-                    <p class="home-artilce-subject">${article.section}</P>
+                <div class="article-container" onclick="message()" >
+                    <img class="new-image-preview" src="${imageUrl}" alt="image preview">
+                    <div class="text-content">
+                        <h1 id="home-headline" class="headline-news-list"><a href="${article.url}" target="blank_" >${article.title}</a></h1>
+                        <p id="home-description" class="description-news-list"><a target="blank_" href="${article.url}">${article.abstract}</a></p>
+                        <p class="home-artilce-subject">${article.section}</P>
+                    </div>
                 </div>
-                </article>
             `
             articlesContainer.appendChild(articleElement);
 
@@ -129,48 +129,3 @@ function message() {
     }
 }
 
-async function moviesPage() {
-    const url = 'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1';
-    const options = {
-        method: 'GET',
-        headers: {
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MTlmZjBkOWJhN2I2NGM4MjliMDhjOThhNjc0MTFiMSIsIm5iZiI6MTcyMjE0NjExNy4wOTIzMDYsInN1YiI6IjY2OWMyZTI5NWRmYjllYThkZjhlYWVkNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.l-evMaMa33FeDcc5mSV2q-m8Po6F2aOWAGI8h9JF8ck',
-            'accept': 'application/json'
-        }
-    };
-
-    try {
-        const response = await fetch(url, options);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        console.log(data);
-        
-        //resets the page
-        let mainData = document.querySelector('.articles')
-        mainData.innerHTML = ''
-        
-        //add the changes(it's other page at all)
-        let moviesElement = document.getElementById('movie-list')
-        let movie = data.results
-        moviesElement.innerHTML = ''
-        
-        movie.forEach(movie => {
-            const movieItem = document.createElement('div')
-            movieItem.classList.add('movie-item')
-            movieItem.innerHTML = `
-                <img src="https://image.tmdb.org/t/p/w400${movie.poster_path}" alt="${movie.title}" />
-                <h2>${movie.title}</h2>
-                <p>${movie.overview}</p>
-                <p>Release Date: ${movie.release_date}</p>
-                <p>Rating: ${movie.vote_average}</p>
-            `
-            moviesElement.appendChild(movieItem)
-        })
-        
-        return data;
-    } catch (error) {
-        console.error('There was a problem with the fetch operation:', error);
-    }
-}

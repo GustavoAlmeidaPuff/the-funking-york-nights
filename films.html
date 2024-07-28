@@ -6,7 +6,7 @@
     <link rel="shortcut icon" type="imagex/png" href="./assets/images/icons/icon.png">
     <title>The the-funking-york-nights</title>
     <link rel="stylesheet" href="./src/css/general.css">
-    <link rel="stylesheet" href="./src/css/main-home-styles.css">
+    <link rel="stylesheet" href="./src/css/fiml-styles.css">
     <link rel="stylesheet" href="./src/css/main-home-tipografy.css">
 </head>
 <body>
@@ -14,14 +14,14 @@
     <!-- Header -->
     <header>
         <div class="logo">
-            <a href="home.html">
+            <a onclick="fetchArticles()" href="./home.html">
                 <img src="./assets/images/icons/logo.png" alt="logo">
             </a>
         </div>
         <h1 class="home-header-title">The funkin' york nights</h1>
         <nav>
             <ul>
-                <li><a onclick="moviesPage()">The mother funkin' movie night</a></li>
+                <li><a href="./films.html">The mother funkin' movie night</a></li>
                 <p>|</p>
                 <li><a href="./src/pages/trending.html">It's hot bro</a></li>
             </ul>
@@ -45,37 +45,11 @@
     <!-- Main content -->
     <main>
         <h2 id="sentence">"shubs shuabs bla bla blink"</h2>
-        <div class="main-content">
-
-            <!-- Articles container -->
-            <div class="articles" id="articles">
-                <!-- javacripto -->
-            </div>
-
-            <div class="movie-list" id="movie-list"></div>
-    
-            <!-- Aside -->
-            <aside>
-                <div class="most-seen-section" >
-                    <h1 class="most-seen-title">The most funked now 🔥</h1>
-                    <ul class="most-seen" id="most-seen">
-                        <!-- aside content -->
-                    </ul> 
-                </div>
-
-                <!-- card ad -->
-                <div class="squareAD">
-                    <img src="./assets/images/advertisement/durexAD1.png" alt="square ad">
-                    <img src="./assets/images/advertisement/durexAD2.png" alt="square ad">
-                </div>
-            </aside>
-
-
-        </div>
+        <div class="movie-list" id="movie-list"></div>
     </main>
 
 
     <!-- js -->
-    <script src="./src/js/scripts.js"></script>
+    <script src="./src/js/filmScripts.js"></script>
 </body>
 </html>
