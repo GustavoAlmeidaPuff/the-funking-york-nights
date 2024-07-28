@@ -28,7 +28,7 @@ async function fetchArticles() {
             articleElement.classList.add('article')
 
             // Initialize the image URL with the placeholder
-            let imageUrl = 'https://placeholder.co/150x100';
+            let imageUrl = 'https://via.placeholder.com/150x100?text=Not+found?...+i+think';
 
             // Checks if the article has media and if the media has metadata
             if (article.media && article.media.length > 0) {
@@ -153,9 +153,21 @@ async function moviesPage() {
         
         //add the changes(it's other page at all)
         let moviesElement = document.getElementById('movie-list')
-        moviesElement.innerHTML = `
-            
-        `
+        let movie = data.results
+        moviesElement.innerHTML = ''
+        
+        movie.forEach(movie => {
+            const movieItem = document.createElement('div')
+            movieItem.classList.add('movie-item')
+            movieItem.innerHTML = `
+                <img src="https://image.tmdb.org/t/p/w400${movie.poster_path}" alt="${movie.title}" />
+                <h2>${movie.title}</h2>
+                <p>${movie.overview}</p>
+                <p>Release Date: ${movie.release_date}</p>
+                <p>Rating: ${movie.vote_average}</p>
+            `
+            moviesElement.appendChild(movieItem)
+        })
         
         return data;
     } catch (error) {
