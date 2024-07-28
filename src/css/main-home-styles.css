@@ -157,6 +157,10 @@ main {
     padding: 0 6px;
     cursor: pointer;
     border-radius: 7px;
+    transition: 0.3s ease;
+}
+.article:hover {
+    transform: scale(1.01);
 }
 
 .new-image-preview {
@@ -240,10 +244,6 @@ aside{
     color: #333;
 }
 
-.most-seen-title:hover {
-    
-}
-
 .most-seen-title , a {
     background-color: #f6f6f6;
 }
@@ -263,9 +263,11 @@ aside{
 
 .most-seen li a:hover {
     color: #bb2043;
+    transform: scale(1.01);
 }
 
 
+/* aside ad */
 .squareAD {
     cursor: pointer;
     width: 86%;

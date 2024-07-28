@@ -87,7 +87,7 @@ async function fetchArticles() {
 
 
             mostSeenElement.innerHTML = `
-                <a target="blank_" href="${mostSeen.url}">${mostSeen.title}<a>
+                <a class='most-seen-item' target="blank_" href="${mostSeen.url}">${mostSeen.title}<a>
             `
 
             mostSeenContainer.appendChild(mostSeenElement);
@@ -126,5 +126,39 @@ function message() {
     if (messageShows < 1) {
         window.alert ('TFYN site do NOT have a read page yet, you will be redirected to the original news page...')
         messageShows++
+    }
+}
+
+async function moviesPage() {
+    const url = 'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1';
+    const options = {
+        method: 'GET',
+        headers: {
+            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MTlmZjBkOWJhN2I2NGM4MjliMDhjOThhNjc0MTFiMSIsIm5iZiI6MTcyMjE0NjExNy4wOTIzMDYsInN1YiI6IjY2OWMyZTI5NWRmYjllYThkZjhlYWVkNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.l-evMaMa33FeDcc5mSV2q-m8Po6F2aOWAGI8h9JF8ck',
+            'accept': 'application/json'
+        }
+    };
+
+    try {
+        const response = await fetch(url, options);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log(data);
+        
+        //resets the page
+        let mainData = document.querySelector('.articles')
+        mainData.innerHTML = ''
+        
+        //add the changes(it's other page at all)
+        let moviesElement = document.getElementById('movie-list')
+        moviesElement.innerHTML = `
+            
+        `
+        
+        return data;
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
     }
 }
