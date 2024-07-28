@@ -1,3 +1,27 @@
+let phrase_element = document.getElementById('sentence')
+phrase_element.innerHTML = "placeholder"
+phrase_element.style.backgroundColor = "rgba(51, 51, 51, 0)"
+
+let phrase = [
+    "If there are a news site that show how people REALLY are... show me it",
+    "SICK!!",
+    "A funkin' way to stay up-to-date",
+    "Left, right, up, or down??",
+    "A mother funkin' news site",
+    `"Why The funkin york nights?"... cus i made this site listening to the fnf's OST... it's simple`
+];
+
+// Função para gerar um número aleatório com base no comprimento do array
+function fraseAleatoria() {
+    let randomIndex = Math.floor(Math.random() * phrase.length);
+    return phrase[randomIndex];
+}
+
+// Exibindo a frase aleatória
+console.log(fraseAleatoria())
+phrase_element.innerHTML = (fraseAleatoria())
+
+
 async function moviesPage() {
     const url = 'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1';
     const options = {
@@ -28,11 +52,14 @@ async function moviesPage() {
             movieItem.classList.add('movie-item')
             movieItem.innerHTML = `
                 <img src="https://image.tmdb.org/t/p/w400${movie.poster_path}" alt="${movie.title}" />
-                <h2>${movie.title}</h2>
-                <p id="overview">${movie.overview}</p>
+                <div class="movie-content">
+                    <h2>${movie.title}</h2>
+                    <hr>
+                    <p class="overview">${movie.overview}</p>
+                </div>
                 <div class="card-footer">
-                    <p>Release Date: ${movie.release_date}</p>
-                    <p>Rating: ${movie.vote_average}</p>
+                    <p>Release Date: <p style="color: #bb2043;">${movie.release_date}</p></p>
+                    <p>Rating: <p style="color: #bb2043;">${movie.vote_average}</p></p>
                 </div>
             `
             moviesElement.appendChild(movieItem)

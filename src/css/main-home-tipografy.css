@@ -48,3 +48,7 @@ nav {
 .text-content, .aside {
     color: #333;
 }
+
+.movie-list {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

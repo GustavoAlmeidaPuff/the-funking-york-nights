@@ -45,7 +45,7 @@ async function fetchArticles() {
 
             articleElement.innerHTML = `
                 
-                <div class="article-container" onclick="message()" >
+                <div href="${article.url}" class="article-container" onclick="message()" >
                     <img class="new-image-preview" src="${imageUrl}" alt="image preview">
                     <div class="text-content">
                         <h1 id="home-headline" class="headline-news-list"><a href="${article.url}" target="blank_" >${article.title}</a></h1>
@@ -103,10 +103,13 @@ fetchArticles();
 //the random sentece code
 let phrase_element = document.getElementById('sentence')
 phrase_element.innerHTML = "placeholder"
+phrase_element.style.backgroundColor = "rgba(51, 51, 51, 0)"
 
 let phrase = [
     "If there are a news site that show how people REALLY are... show me it",
+    "SICK!!",
     "A funkin' way to stay up-to-date",
+    "Left, right, up, or down??",
     "A mother funkin' news site",
     `"Why The funkin york nights?"... cus i made this site listening to the fnf's OST... it's simple`
 ];
