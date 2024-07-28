@@ -3,12 +3,12 @@ phrase_element.innerHTML = "placeholder"
 phrase_element.style.backgroundColor = "rgba(51, 51, 51, 0)"
 
 let phrase = [
-    "If there are a news site that show how people REALLY are... show me it",
-    "SICK!!",
-    "A funkin' way to stay up-to-date",
-    "Left, right, up, or down??",
-    "A mother funkin' news site",
-    `"Why The funkin york nights?"... cus i made this site listening to the fnf's OST... it's simple`
+    "•If there are a news site that show how people REALLY are... show me it",
+    "•SICK!!",
+    "•A funkin' way to stay up-to-date",
+    "•Left, right, up, or down??",
+    "•A mother funkin' news site",
+    `•"Why The funkin york nights?"... cus i made this site listening to the fnf's OST... it's simple`
 ];
 
 // Função para gerar um número aleatório com base no comprimento do array

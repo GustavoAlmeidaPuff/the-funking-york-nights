@@ -106,12 +106,12 @@ phrase_element.innerHTML = "placeholder"
 phrase_element.style.backgroundColor = "rgba(51, 51, 51, 0)"
 
 let phrase = [
-    "If there are a news site that show how people REALLY are... show me it",
-    "SICK!!",
-    "A funkin' way to stay up-to-date",
-    "Left, right, up, or down??",
-    "A mother funkin' news site",
-    `"Why The funkin york nights?"... cus i made this site listening to the fnf's OST... it's simple`
+    "•If there are a news site that show how people REALLY are... show me it",
+    "•SICK!!",
+    "•A funkin' way to stay up-to-date",
+    "•Left, right, up, or down??",
+    "•A mother funkin' news site",
+    `•"Why The funkin york nights?"... cus i made this site listening to the fnf's OST... it's simple`
 ];
 
 // Função para gerar um número aleatório com base no comprimento do array
@@ -132,3 +132,38 @@ function message() {
     }
 }
 
+//square AD
+const images = [
+    "./assets/images/advertisement/durexAD1.png",
+    "./assets/images/advertisement/durexAD2.png",
+    "./assets/images/advertisement/matrixTrump.png"
+];
+
+// Função para escolher uma imagem aleatória distinta
+function getRandomImage(excludeImages = []) {
+    let filteredImages = images.filter(img => !excludeImages.includes(img));
+    const randomIndex = Math.floor(Math.random() * filteredImages.length);
+    return filteredImages[randomIndex];
+}
+
+// Seleciona os elementos de imagem
+const imgElement1 = document.querySelector('.random-square-ad');
+const imgElement2 = document.querySelector('.random-square-ad-2');
+
+// Define o src para imagens aleatórias distintas
+const firstImage = getRandomImage();
+const secondImage = getRandomImage([firstImage]);
+
+imgElement1.src = firstImage;
+imgElement2.src = secondImage;
+
+function Cstrike() {
+    let html = document.querySelector('body')
+
+    setTimeout(() => {
+        html.innerHTML = `<img id="Cstrike" src="./assets/images/bug.png">
+        <br>
+        <p style="font-size: 7em; font-family: 'funkin font', Arial, Helvetica, sans-serif ;letter-spacing: 6px; -webkit-text-stroke: 10px transparent; ">just joking... you just found a "easter egg", you can return now by pressing... <p style="font-size: 12em; font-familly: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">"f5"</p></p>`
+    }, 2500);
+    html.innerHTML = `<div class="loading-container"><img id="loading" src="./assets/images/loading.gif"></div>`
+}

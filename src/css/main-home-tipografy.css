@@ -15,7 +15,7 @@
 }
 
 .articles{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .home-header-title{
@@ -51,4 +51,9 @@ nav {
 
 .movie-list {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.catalog-title {
+    font-family: 'funkin font', Arial, Helvetica, sans-serif ;
+    letter-spacing: 4px; 
 }

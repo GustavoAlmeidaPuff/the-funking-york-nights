@@ -1,3 +1,24 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#loading {
+    width: 85px;
+}
+
+#Cstrike {
+    width: 100%;
+    height: auto;
+}
+
 /* header */
 
 header {
@@ -140,7 +161,7 @@ main {
     margin: 0 auto;
     padding: 20px;
     text-align: left;
-    background-color: rgba(51, 51, 51, 0);;
+    background: none;
 }
 
 /* random sentence */
@@ -161,16 +182,14 @@ main {
 
 .article-container {
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-    background-color: rgba(51, 51, 51, 0);
     background: none;
     display: flex;
     background-color: #f6f6f6;
     align-items: center;
-    margin: 10px 0;
+    margin: 12.5px 0;
     margin-top: 0;
     padding: 0 6px;
     cursor: pointer;
-    border: 0;
     border-radius: 7px;
     transition: 0.3s ease;
 }
@@ -240,7 +259,7 @@ aside{
     width: 65vh;
     position: sticky;
     top: 0;
-    background-color: rgba(51, 51, 51, 0);
+    background:none;
 }
 .most-seen-section {
     display: flex;

@@ -130,6 +130,7 @@ hr {
 
 main {
     text-align: center;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,6 +150,16 @@ main {
 #sentence:hover {
     color: linear-gradient(to right, #bb2043, #58b8eb); 
 }
+
+/* titile */
+.catalog-title {
+    text-wrap: nowrap;
+    max-width: fit-content;
+    background: none;
+    font-size: 2.5em;
+    margin-top: 16px;
+}
+
 
 /* movies page */
 .movie-list {
