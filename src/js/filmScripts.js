@@ -1,3 +1,27 @@
+function idwgyu() {
+    const sols = [
+        "Primeira frase",
+        "Segunda frase",
+        "Terceira frase",
+        "Quarta frase",
+        "Quinta frase"
+    ];
+    
+    let solsIndex = 0;
+    
+    function changePhrase() {
+        const phraseContainer = document.getElementById('phrase');
+        phraseContainer.innerHTML = sols[solsIndex];
+        solsIndex = (solsIndex + 1) % sols.length; 
+        setTimeout(changePhrase, 3000); 
+    }
+    
+    changePhrase();
+}
+
+
+
+
 let phrase_element = document.getElementById('sentence')
 phrase_element.innerHTML = "placeholder"
 phrase_element.style.backgroundColor = "rgba(51, 51, 51, 0)"
@@ -11,15 +35,15 @@ let phrase = [
     `•"Why The funkin york nights?"... cus i made this site listening to the fnf's OST... it's simple`
 ];
 
-// Função para gerar um número aleatório com base no comprimento do array
-function fraseAleatoria() {
+//
+function randomPhrase() {
     let randomIndex = Math.floor(Math.random() * phrase.length);
     return phrase[randomIndex];
 }
 
 // Exibindo a frase aleatória
-console.log(fraseAleatoria())
-phrase_element.innerHTML = (fraseAleatoria())
+console.log(randomPhrase())
+phrase_element.innerHTML = (randomPhrase())
 
 
 async function moviesPage() {

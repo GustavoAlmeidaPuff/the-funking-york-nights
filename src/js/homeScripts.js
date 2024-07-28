@@ -115,14 +115,14 @@ let phrase = [
 ];
 
 // Função para gerar um número aleatório com base no comprimento do array
-function fraseAleatoria() {
+function randomPhrase() {
     let randomIndex = Math.floor(Math.random() * phrase.length);
     return phrase[randomIndex];
 }
 
 // Exibindo a frase aleatória
-console.log(fraseAleatoria())
-phrase_element.innerHTML = (fraseAleatoria())
+console.log(randomPhrase())
+phrase_element.innerHTML = (randomPhrase())
 
 messageShows = 0
 function message() {
